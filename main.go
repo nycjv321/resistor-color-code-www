@@ -12,7 +12,7 @@ type Bands struct {
 
 func main() {
 	router := gin.Default()
-	router.POST("/tolerance", func(c *gin.Context) {
+	router.POST("/resistance", func(c *gin.Context) {
 		var bands Bands
 		if c.BindJSON(&bands) == nil {
 			c.JSON(http.StatusOK, r.GetResistance(bands.Bands))
